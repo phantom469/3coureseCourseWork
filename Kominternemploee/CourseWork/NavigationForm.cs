@@ -104,6 +104,8 @@ namespace CourseWork
         private void NavigationForm_Load(object sender, EventArgs e)
         {
             LoadData();
+            comboBox1.SelectedIndex = 2;
+            
         }
         private  void btnMoreInfo_Click(object sender, EventArgs e)
         {
@@ -483,6 +485,43 @@ namespace CourseWork
                 }
             }
             
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            ReportForm reportForm = new ReportForm();
+            
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    //Принятие на работу
+                    XtraReport1 report1 = new XtraReport1();
+                    reportForm.documentViewer1.DocumentSource = report1;
+                    reportForm.ShowDialog();
+                    break;
+
+                case 1:
+                    //Доход сотрудников
+                    XtraReport2 report2 = new XtraReport2();
+                    reportForm.documentViewer1.DocumentSource = report2;
+                    reportForm.ShowDialog();
+                    break;
+                
+                case 2:
+                    //Общая информация
+                    XtraReport3 report3 = new XtraReport3();
+                    reportForm.documentViewer1.DocumentSource = report3;
+                    reportForm.ShowDialog();
+                    break;
+
+                default:
+                    goto case 2;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

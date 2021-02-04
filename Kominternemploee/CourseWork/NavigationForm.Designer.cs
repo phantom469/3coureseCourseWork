@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NavigationForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabEmploee = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button14 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -89,6 +91,8 @@
             // 
             // tabEmploee
             // 
+            this.tabEmploee.Controls.Add(this.comboBox1);
+            this.tabEmploee.Controls.Add(this.button14);
             this.tabEmploee.Controls.Add(this.button5);
             this.tabEmploee.Controls.Add(this.groupBox1);
             this.tabEmploee.Controls.Add(this.button4);
@@ -104,6 +108,29 @@
             this.tabEmploee.TabIndex = 0;
             this.tabEmploee.Text = "Сотрудники";
             this.tabEmploee.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Принятие на работу",
+            "Доходов сотрудников",
+            "Общая информация "});
+            this.comboBox1.Location = new System.Drawing.Point(769, 210);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(111, 21);
+            this.comboBox1.TabIndex = 9;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(768, 232);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(113, 23);
+            this.button14.TabIndex = 8;
+            this.button14.Text = "Печать отчёта";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button5
             // 
@@ -443,5 +470,7 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
